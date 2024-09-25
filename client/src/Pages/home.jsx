@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchBox from '../Search/searchBox'
-import ProfileList from '../UserProfile/profileList'
+import SearchBox from '../components/Search/searchBox'
+import ProfileList from '../components/UserProfile/profileList'
 
 function Home() {
   return (

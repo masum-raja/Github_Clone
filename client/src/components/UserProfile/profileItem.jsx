@@ -1,10 +1,10 @@
 import React from "react";
-import { Badge, Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 
-function ProfileItem({ avatar_url, login, url }) {
+function ProfileItem({ avatar_url, login }) {
   return (
     <Box
-      bg="hsla(225, 100%, 94%, 0.801)"
+      bg="#ddefff"
       borderRadius="lg"
       overflow="hidden"
       boxShadow="lg"
@@ -16,7 +16,7 @@ function ProfileItem({ avatar_url, login, url }) {
       cursor="pointer"
     >
       <Box
-        bg="rgba(253, 253, 253, 0.808)"
+        bg="#FDFAFA"
         borderRadius="10px"
         p={6}
         minW="225px"
@@ -38,7 +38,7 @@ function ProfileItem({ avatar_url, login, url }) {
           {login}
         </Text>
 
-        <Flex justify="center" align="center" my={4}>
+        {/* <Flex justify="center" align="center" my={4}>
           <Box textAlign="center" mx={2}>
             <Badge
               bg="#f0ebfa"
@@ -81,16 +81,20 @@ function ProfileItem({ avatar_url, login, url }) {
               11
             </Text>
           </Box>
-        </Flex>
+        </Flex> */}
 
         <Button
-          bg="hsl(245, 44%, 65%)"
+          bg="#6a5acd"
           color="white"
           width="100px"
           height="35px"
-          borderRadius="10px"
-          fontWeight="600"
+          borderRadius="8px"
+          fontWeight="500"
           boxShadow="0 10px 10px hsl(225, 100%, 94%)"
+          mt={10}
+          _hover={{
+            bg: "#8a79f0"
+          }}
         >
           See More
         </Button>
