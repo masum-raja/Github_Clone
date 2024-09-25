@@ -61,7 +61,7 @@ function ProfileItem({ avatar_url, login, url }) {
               borderRadius="full"
               fontSize="10px"
             >
-              Following
+              Followers
             </Badge>
             <Text color="#7b8ca0" fontSize="14px">
               45
@@ -75,7 +75,7 @@ function ProfileItem({ avatar_url, login, url }) {
               borderRadius="full"
               fontSize="10px"
             >
-              Followers
+             Repositories
             </Badge>
             <Text color="#7b8ca0" fontSize="14px">
               11
