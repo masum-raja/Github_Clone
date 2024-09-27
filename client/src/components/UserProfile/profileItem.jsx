@@ -1,7 +1,14 @@
 import React from "react";
 import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-function ProfileItem({ avatar_url, login }) {
+const ProfileItem = ({ avatar_url, login }) => {
+  const navigate = useNavigate();
+
+  const handleSeeMore = () => {
+    navigate(`/user/${login}`);
+  };
+
   return (
     <Box
       bg="#ddefff"
@@ -38,51 +45,6 @@ function ProfileItem({ avatar_url, login }) {
           {login}
         </Text>
 
-        {/* <Flex justify="center" align="center" my={4}>
-          <Box textAlign="center" mx={2}>
-            <Badge
-              bg="#f0ebfa"
-              color="#788697"
-              p={1}
-              borderRadius="full"
-              fontSize="10px"
-            >
-              Articles
-            </Badge>
-            <Text color="#7b8ca0" fontSize="14px">
-              23
-            </Text>
-          </Box>
-          <Box textAlign="center" mx={2}>
-            <Badge
-              bg="#f0ebfa"
-              color="#788697"
-              p={1}
-              borderRadius="full"
-              fontSize="10px"
-            >
-              Followers
-            </Badge>
-            <Text color="#7b8ca0" fontSize="14px">
-              45
-            </Text>
-          </Box>
-          <Box textAlign="center" mx={2}>
-            <Badge
-              bg="#f0ebfa"
-              color="#788697"
-              p={1}
-              borderRadius="full"
-              fontSize="10px"
-            >
-             Repositories
-            </Badge>
-            <Text color="#7b8ca0" fontSize="14px">
-              11
-            </Text>
-          </Box>
-        </Flex> */}
-
         <Button
           bg="#6a5acd"
           color="white"
@@ -95,6 +57,7 @@ function ProfileItem({ avatar_url, login }) {
           _hover={{
             bg: "#8a79f0"
           }}
+          onClick={handleSeeMore}
         >
           See More
         </Button>

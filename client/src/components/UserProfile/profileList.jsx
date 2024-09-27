@@ -1,21 +1,13 @@
-
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import ProfileItem from "./profileItem";
-import { useEffect, useState } from "react";
+import useUserStore from "../../zustand/store";
 
-function ProfileList() {
-    const [users, setUsers] = useState([]);
+const ProfileList = () => {
+  const { users, isLoading } = useUserStore();
 
-    useEffect(() => {
-        getUsers();
-    }, [])
-
-
-    const getUsers = async () => {
-        const response = await fetch("https://api.github.com/users");
-        const FinalData = await response.json();
-        setUsers(FinalData)
-    }
+  if (isLoading) {
+    return <Text textAlign={'center'} mt={'10'}>Loading............</Text>;
+  }
 
   return (
     <Box maxW="6xl" mx="auto" p={3} mt={5}>
